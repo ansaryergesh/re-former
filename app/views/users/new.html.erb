@@ -1,6 +1,10 @@
- <form action="/new" method="get">
-  Username: <input type="text" name="username"><br>
-  Email: <input type="text" name="email"><br>
-  Password: <input type="password" name="password">
+<form  accept-charset="UTF-8" action="<%= users_path %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username:</label>
+  <input type="text" name="username" ><br>
+  <label for="email">Email:</label>
+  <input type="text" name="email"><br>
+  <label for="password">Password:</label>
+  <input type="password" name="password">
   <input type="submit" value="Submit">
 </form> 
