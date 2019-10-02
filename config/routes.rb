@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :users, :only [:new,:create]
+  get 'users/generator'
+  get 'users/new'
+  get 'users/create'
+  resources :users, only: [:new,:create]
 end
