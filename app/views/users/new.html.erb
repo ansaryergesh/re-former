@@ -9,9 +9,10 @@
   <input type="password" name="user[password]">
   <input type="submit" value="Submit">
 </form>
+ 
 
-
-<%= form_tag("/users", method: "post") do %>
+<%= form_tag users_path do %>
+ <%= render 'shared/error_messages' %>
   <%= label_tag(:username, "Username:") %>
   <%= text_field_tag(:username) %> <br>
   <%= label_tag(:email, "Email:") %>
@@ -20,7 +21,7 @@
   <%= text_field_tag(:password) %><br>
   <%= submit_tag("Create") %>
 <% end %>
- -->
+-->
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages' %>
